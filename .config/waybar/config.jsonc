@@ -1,0 +1,148 @@
+// -*- mode: jsonc -*-
+{
+  // "layer": "top", // Waybar at top layer
+  // "position": "bottom", // Waybar position (top|bottom|left|right)
+  "height": 35, // Waybar height (to be removed for auto height)
+  // "width": 1280, // Waybar width
+  "spacing": 5, // Gaps between modules (4px)
+  // Choose the order of the modules
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/submap",
+    "hyprland/scratchpad",
+    "cpu",
+    "temperature",
+    "memory",
+    "hyprland/window",
+  ],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "battery",
+    "backlight",
+    "keyboard-state",
+    "wireplumber",
+    "tray",
+    "hyprland/language",
+  ],
+  // Modules configuration
+  // "sway/workspaces": {
+  //     "disable-scroll": true,
+  //     "all-outputs": true,
+  //     "warp-on-scroll": false,
+  //     "format": "{name}: {icon}",
+  //     "format-icons": {
+  //         "1": "",
+  //         "2": "",
+  //         "3": "",
+  //         "4": "",
+  //         "5": "",
+  //         "urgent": "",
+  //         "focused": "",
+  //         "default": ""
+  //     }
+  // },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10,
+  },
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}",
+  },
+  "cpu": {
+    "format": "CPU {usage}%",
+    "tooltip": false,
+  },
+  "memory": {
+    "format": "RAM {}%",
+  },
+  "temperature": {
+    // "thermal-zone": 8,
+    "hwmon-path": "/sys/class/hwmon/hwmon7/temp1_input",
+    "critical-threshold": 80,
+    // "format-critical": "{temperatureC}°C {icon}",
+    "format": "TEMP {temperatureC}°C",
+  },
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "BKLT {percent}%",
+    "scroll-step": 2.5,
+  },
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "BAT {capacity}%",
+    "format-full": "BAT {capacity}%",
+    "format-charging": "BAT {capacity}% 🔌",
+    "format-plugged": "BAT {capacity}% 🔌",
+    "format-alt": "BAT {time}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": ["", "", "", "", ""],
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "⚡",
+      "performance": "⚡",
+      "balanced": "⚖️",
+      "power-saver": "🍁",
+    },
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+  },
+  // "pulseaudio": {
+  //     // "scroll-step": 1, // %, can be a float
+  //     "format": "{volume}% {icon} {format_source}",
+  //     "format-bluetooth": "{volume}% {icon} {format_source}",
+  //     "format-bluetooth-muted": " {icon} {format_source}",
+  //     "format-muted": " {format_source}",
+  //     "format-source": "{volume}% ",
+  //     "format-source-muted": "",
+  //     "format-icons": {
+  //         "headphone": "",
+  //         "hands-free": "",
+  //         "headset": "",
+  //         "phone": "",
+  //         "portable": "",
+  //         "car": "",
+  //         "default": ["", "", ""]
+  //     },
+  //     "on-click": "pavucontrol"
+  // },
+  "custom/power": {
+    "format": "⏻ ",
+    "tooltip": false,
+    "menu": "on-click",
+    "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+    "menu-actions": {
+      "shutdown": "shutdown",
+      "reboot": "reboot",
+      "suspend": "systemctl suspend",
+      "hibernate": "systemctl hibernate",
+    },
+  },
+  "hyprland/language": {
+    "format": " {} ",
+    "format-en": "🇬🇧",
+    "format-sk": "🇸🇰",
+    "format-uk": "🇺🇦",
+    "keyboard-name": "at-translated-set-2-keyboard",
+  },
+  "wireplumber": {
+    "format": "SND {volume}%",
+    "scroll-step": 2.5,
+  },
+}
