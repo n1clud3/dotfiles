@@ -103,7 +103,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias hyprconf="ms-edit ~/.config/hypr/hyprland.conf"
+alias hyprconf="nano ~/.config/hypr/hyprland.conf"
 alias sshswan="/usr/bin/ssh workspace@77.37.49.85"
 alias sshn1="/usr/bin/ssh pi@128.0.170.9"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias codium="/usr/bin/codium --ozone-platform-hint=wayland"
+alias code="codium"
