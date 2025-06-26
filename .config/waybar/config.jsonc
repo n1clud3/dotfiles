@@ -17,6 +17,7 @@
   ],
   "modules-center": ["clock"],
   "modules-right": [
+    "power-profiles-daemon",
     "battery",
     "backlight",
     "keyboard-state",
@@ -88,10 +89,10 @@
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
     "format-icons": {
-      "default": "⚡",
-      "performance": "⚡",
-      "balanced": "⚖️",
-      "power-saver": "🍁",
+      "default": "PRF",
+      "performance": "PRF",
+      "balanced": "BAL",
+      "power-saver": "SAV",
     },
   },
   "network": {
