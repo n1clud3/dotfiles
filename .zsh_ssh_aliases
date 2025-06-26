@@ -1,0 +1,7 @@
+# Aliases of IPs and usernames to use with SSH and SCP
+
+export SSHSWAN="workspace@77.37.49.85"
+export SSHNICPI="pi@128.0.170.9"
+
+alias sshswan="/usr/bin/ssh $SSHSWAN"
+alias sshnicpi="/usr/bin/ssh $SSHNICPI"
