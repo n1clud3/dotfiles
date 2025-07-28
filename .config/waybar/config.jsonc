@@ -13,6 +13,7 @@
     "cpu",
     "temperature",
     "memory",
+    "mpd",
     "hyprland/window",
   ],
   "modules-center": ["clock"],

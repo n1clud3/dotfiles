@@ -2,6 +2,7 @@
 
 alias gmwine="WINEPREFIX=$HOME/.local/share/Steam/steamapps/compatdata/4000/pfx /usr/bin/wine"
 alias gmad="gmwine $HOME/.local/share/Steam/steamapps/common/GarrysMod/bin/gmad.exe"
+alias gmpublish="gmwine $HOME/.local/share/Steam/steamapps/common/GarrysMod/bin/gmpublish.exe"
 alias hammer="gmwine $HOME/.local/share/Steam/steamapps/common/GarrysMod/bin/hammer.exe"
 alias vtex="gmwine $HOME/.local/share/Steam/steamapps/common/GarrysMod/bin/vtex.exe"
 alias crowbar="gmwine $HOME/.local/share/Steam/steamapps/common/GarrysMod/Crowbar.exe"

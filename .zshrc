@@ -87,6 +87,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='nvim'
 # fi
+export EDITOR='nano'
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
