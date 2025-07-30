@@ -68,7 +68,8 @@
   "backlight": {
     // "device": "acpi_video1",
     "format": "BKLT {percent}%",
-    "scroll-step": 2.5,
+    "scroll-step": 12.75,
+    "min-brightness": 25.5
   },
   "battery": {
     "states": {
@@ -78,7 +79,7 @@
     },
     "format": "BAT {capacity}%",
     "format-full": "BAT {capacity}%",
-    "format-charging": "BAT {capacity}% 🔌",
+    "format-charging": "BAT {capacity}% ⚡",
     "format-plugged": "BAT {capacity}% 🔌",
     "format-alt": "BAT {time}",
     // "format-good": "", // An empty format will hide the module
@@ -133,7 +134,6 @@
       "shutdown": "shutdown",
       "reboot": "reboot",
       "suspend": "systemctl suspend",
-      "hibernate": "systemctl hibernate",
     },
   },
   "hyprland/language": {
@@ -141,7 +141,6 @@
     "format-en": "🇬🇧",
     "format-sk": "🇸🇰",
     "format-uk": "🇺🇦",
-    "keyboard-name": "at-translated-set-2-keyboard",
   },
   "wireplumber": {
     "format": "SND {volume}%",
